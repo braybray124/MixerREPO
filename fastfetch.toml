@@ -1,0 +1,23 @@
+package="fastfetch"
+version="2.51.1"
+stamp="<STAMP>"
+store_path="/var/lib/mixer/store/blake3-<HASH>"
+built_with={toolchain="mixer-llvm-18.1", features=["feature1","feature2"], cflags="-O2 -pipe"}
+sources=[{url="<SOURCE_URL>", sha256="<HASH>"}]
+deps={build=[], runtime=[]}
+config_opts=[
+	"--prefix=/usr",
+	"<other-config-options>"
+]
+install_steps=[
+	"make",
+	"make install",
+	"<other-install-steps>"
+]
+fileset=[
+	"/usr/bin/<name>",
+	"<other-files>"
+]
+mirrors_used=["https://github.com/fastfetch-cli/fastfetch/archive/2.51.1/fastfetch-2.51.1.tar.gz"]
+installed_by="system"
+installed_at="<TIMESTAMP>"
